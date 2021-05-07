@@ -13,9 +13,7 @@ ll powe(ll x, ll y){ x = x%mod, y=y%(mod-1);ll ans = 1;while(y>0){if (y&1){ans =
 
 
 void solve(){
-	int n;
-    cin>>n;
-    cout<<n;
+	
 }
 
 

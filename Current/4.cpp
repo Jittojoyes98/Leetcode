@@ -13,19 +13,7 @@ ll powe(ll x, ll y){ x = x%mod, y=y%(mod-1);ll ans = 1;while(y>0){if (y&1){ans =
 
 
 void solve(){
-	int n;
-    string s;
-    cin>>n>>s;
-    vector<int>a(n,1);
-    for(int i=1;i<n;i++){
-        if(s[i-1]<s[i]){
-            a[i]+=a[i-1];
-        }
-    }
-    for(auto x: a){
-        cout<<x<<" ";
-    }
-    cout<<endl;
+	
 }
 
 
