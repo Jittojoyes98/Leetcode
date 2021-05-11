@@ -37,6 +37,16 @@ void solve(){
     above.For a pointer we use (*ptr) to get that element as a
     Whole (or node here). 
     /* END */
+
+    /*NOW THERE ARE CERTAIN CHANGES TO OUR SYNTAX
+
+    IN C++
+
+    new node() is used which gives a new node of the specified
+    value. note that it returns a pointer,so be sure about it .
+    
+    
+    */
 }
 
 signed main(){

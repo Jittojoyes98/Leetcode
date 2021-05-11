@@ -12,7 +12,8 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        
+        // this is a great idea because the cur is always less than
+        // the itrs
 //         first create a dummy node
         ListNode dummy(-101);
 //         now make a pointer point to the node so that it can 
