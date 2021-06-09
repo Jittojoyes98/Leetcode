@@ -13,6 +13,11 @@ ll powe(ll x, ll y){ x = x%mod, y=y%(mod-1);ll ans = 1;while(y>0){if (y&1){ans =
 struct node{
     int data;
     struct node *next;
+    // node(int x){
+    //     data=x;
+    // }
+    
+
 };
 
 // important here
@@ -20,15 +25,18 @@ struct node *head=NULL;
 
 /* Insert the first node */ 
 void initial(int x){
-    struct node *ptr=(struct node*)malloc(sizeof(struct node));
-    ptr->data=x;
-    ptr->next=NULL;
+    // note here that we can use class based creation of values
+    // in that case we can use "new" keyword but here we can 
+    // only use malloc
+    struct node *ptr=new node();
+    // ptr->data=x;
+    // ptr->next=NULL;
     head=ptr;
 }
 
 /*Insertion in the front*/
 void insertFront(int val){
-    struct node *new_node=(struct node*)malloc(sizeof(struct node));
+    struct node *new_node=new node();
     new_node->data=val;
     new_node->next=head;
     head=new_node;
@@ -36,7 +44,7 @@ void insertFront(int val){
 
 /*Appending or adding from the front */
 void insertEnd(int x){
-    struct node *ptr=(struct node*)malloc(sizeof(struct node));
+    struct node *ptr=new node();
     ptr->data=x;
     ptr->next=NULL;
     struct node *itr=head;
@@ -53,7 +61,7 @@ void insertEnd(int x){
 
 /*Inserting after a particular node after a value */
 void insertAfterValue(int x,int y){
-    node *ptr=(node*)malloc(sizeof(node));
+    node *ptr=new node();
     ptr->data=y;
     node *itr=head;
     while(itr!=NULL){

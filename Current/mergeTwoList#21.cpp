@@ -1,26 +1,37 @@
-/**
- * 
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
+#include<bits/stdc++.h>
+using namespace std;
+  
+//   Definition for singly-linked list.
+  struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode() {
+          val=0;
+          next=NULL;
+      }
+      ListNode(int x){
+          val=x;
+          next=NULL;
+      }
+      ListNode(int x, ListNode *next) {
+          val=x;
+          ListNode *next=next;
+        //   this is still in doubt
+      }
+  };
+ 
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         // this is a great idea because the cur is always less than
         // the itrs
 //         first create a dummy node
-        ListNode dummy(-101);
+        ListNode *dummy=new ListNode(-101);
 //         now make a pointer point to the node so that it can 
 //         acess the next of the dummy node
-        ListNode* store=&dummy;
-        ListNode* cur=&dummy;
-        if( l1==NULL and  l2==NULL)
+        ListNode* store=dummy;
+        ListNode* cur=dummy;
+        if( l1== NULL and  l2==NULL)
             return NULL;
         if(l1==NULL){
             return l2;
